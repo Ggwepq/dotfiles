@@ -5,7 +5,8 @@ vim.pack.add({
     "https://github.com/rafamadriz/friendly-snippets",
     { src = "https://github.com/nvim-treesitter/nvim-treesitter", branch = "main" },
     "https://github.com/neovim/nvim-lspconfig",
-    "https://github.com/mason-org/mason.nvim"
+    "https://github.com/mason-org/mason.nvim",
+    "https://github.com/folke/flash.nvim"
 })
 
 ---- mini files ----
@@ -106,3 +107,13 @@ require("treesitter")
 
 ---- lsp ----
 require("lsp")
+
+---- flash ----
+require("flash").setup()
+
+vim.keymap.set({"n","x","o"}, "<leader>s", function() require("flash").jump() end, {desc = "Flash Jump"})
+vim.keymap.set({"n","x","o"}, "<leaker>S", function() require("flash").treesitter() end, {desc = "Flash Treesitter"})
+vim.keymap.set("o","<leader>r", function() require("flash").remote() end, {desc = "Remote Flash "})
+vim.keymap.set({"x","o"}, "<leader>R", function() require("flash").treesitter_search() end, {desc = "Flash Treesitter Search"})
+
+
