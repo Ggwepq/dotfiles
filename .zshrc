@@ -134,6 +134,8 @@ alias lts="eza --tree --icons=always --tree --level=2 --group-directories-first 
 # git binds
 alias gits="git status"
 alias lg="lazygit"
+alias glp="git log $branch --pretty=format:'%C(yellow)%h%Creset - %C(green)%an%Creset, $ar : %s'"
+alias glt="git log --graph --oneline --all --decorate"
 
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias lzdots="GIT_DIR=$HOME/.cfg  GIT_WORK_TREE=$HOME lazygit"
