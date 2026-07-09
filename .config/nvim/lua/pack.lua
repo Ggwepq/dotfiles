@@ -1,12 +1,14 @@
 -- add plugins
 vim.pack.add({
-    "https://github.com/bluz71/vim-moonfly-colors",
+    -- "https://github.com/bluz71/vim-moonfly-colors",
     "https://github.com/nvim-mini/mini.nvim",
     "https://github.com/rafamadriz/friendly-snippets",
     { src = "https://github.com/nvim-treesitter/nvim-treesitter", branch = "main" },
     "https://github.com/neovim/nvim-lspconfig",
     "https://github.com/mason-org/mason.nvim",
-    "https://github.com/folke/flash.nvim"
+    "https://github.com/folke/flash.nvim",
+    "https://github.com/norcalli/nvim-colorizer.lua",
+    "https://github.com/RedsXDD/neopywal.nvim",
 })
 
 ---- mini files ----
@@ -108,6 +110,9 @@ require("treesitter")
 ---- lsp ----
 require("lsp")
 
+---- colorizer ----
+require("colorizer").setup()
+
 ---- flash ----
 require("flash").setup()
 
@@ -116,4 +121,11 @@ vim.keymap.set({"n","x","o"}, "<leaker>S", function() require("flash").treesitte
 vim.keymap.set("o","<leader>r", function() require("flash").remote() end, {desc = "Remote Flash "})
 vim.keymap.set({"x","o"}, "<leader>R", function() require("flash").treesitter_search() end, {desc = "Flash Treesitter Search"})
 
-
+---- colorizer ----
+require("neopywal").setup({
+    transparent_background = true,
+    plugins = {
+        treesitter = true,
+        telescope = true,
+    }
+})

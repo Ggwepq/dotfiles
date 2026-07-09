@@ -1,6 +1,5 @@
 vim.g.netrw_banner = 0
 local opt = vim.opt
-local opt = vim.opt
 
 opt.number = true
 opt.relativenumber = true
@@ -38,7 +37,6 @@ opt.isfname:append("@-@")
 opt.guicursor = ""
 
 opt.signcolumn = "yes"
-vim.o.cmdheight = 0
 
 
 -- YANK

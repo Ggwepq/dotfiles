@@ -5,5 +5,5 @@ require("keymaps")
 require("commands")
 require("pack")
 
+vim.cmd.colorscheme("neopywal")
 
-vim.cmd.colorscheme("moonfly")
