@@ -117,7 +117,8 @@ zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'eza -1 --icons=always --gro
 alias start="xdg-open . > /dev/null 2>&1 &"
 alias cls="clear"
 alias cd="z"
-alias ff="fastfetch"
+alias ff="clear && fastfetch"
+alias nvdot="(z nvim && nvim .)"
 
 # directory binds
 alias dirs="ls -l"
@@ -142,6 +143,8 @@ alias lzdots="GIT_DIR=$HOME/.cfg  GIT_WORK_TREE=$HOME lazygit"
 
 bindkey '^F' fzf-file-widget
 bindkey '^T' transpose-chars
+
+ff
 
 # Custom fzf configuration with live file/directory previews
 export FZF_DEFAULT_OPTS="

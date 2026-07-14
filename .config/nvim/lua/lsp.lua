@@ -20,5 +20,10 @@ vim.lsp.config("lua_ls", {
 })
 
 vim.lsp.enable({
-    "lua_ls"
+    "lua_ls",
+    "cssls",
+    "html",
+    "tailwindcss",
+    "ts_ls",
+    "quick_lint_js",
 })
